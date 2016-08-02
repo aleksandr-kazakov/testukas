@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<a href="{% url 'index' %}">Back to question list</a>
+	<h3>{{ question.Q|capfirst }}</h3>
+	<li>{{ question.A1 }}</li>
+	<li>{{ question.A2 }}</li>
+	
+{% endblock %}

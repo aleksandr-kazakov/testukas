@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h3>Questions list</h3>
+	<ul>
+		{% for question in questions %}
+			<li>
+				<a href="{% url 'question_detail' question.id %}">
+					{{ question.Q|capfirst }}
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
+{% endblock %}			
